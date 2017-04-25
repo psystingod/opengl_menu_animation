@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/out.dir/main.cpp.o  -o out -rdynamic -lGLU -lGL -lSM -lICE -lX11 -lXext -lglut -lXmu -lXi 
