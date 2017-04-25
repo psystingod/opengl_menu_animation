@@ -1,0 +1,1 @@
+/home/usuario/figurasglut/lampara/build/CMakeFiles/out.dir

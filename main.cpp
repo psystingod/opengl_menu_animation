@@ -20,14 +20,14 @@ int vf[5]={2}; // venctor donde almacenaremos el id de la imagen a imprimir
 void menu(int opc){
     vf[1]=opc; // En el vector VF, en su campo 1, se almacenara el id de la imagen
     glPushMatrix();
-    glColor3f(1.0,1.0,0.0); 
+    //glColor3f(1.0,1.0,0.0); 
     glTranslated((rx*0.001),(ry*0.001),0.0); // ubicando la posicion donde se imprimira la imagen
     // rx, ry, se multiplica por 0.001, porque sus valores son centenas y al hacer esa operacion
     // permite obtener su valor en decimal ("0.000")
-    GLfloat mat_ambient[] = { 0.329412f, 0.223529f, 0.027451f,1.0f };
-    GLfloat mat_diffuse[] = { 0.780392f, 0.568627f, 0.113725f, 1.0f };
-    GLfloat mat_specular[] = { 0.992157f, 0.941176f, 0.807843f, 1.0f };
-    GLfloat shine[] = {27.8974f};
+    GLfloat mat_ambient[] = { 0.329412f, 0.723529f, 0.127451f,1.0f };
+    GLfloat mat_diffuse[] = { 0.180392f, 0.768627f, 0.113725f, 1.0f };
+    GLfloat mat_specular[] = { 0.992157f, 0.41176f, 0.207843f, 1.0f };
+    GLfloat shine[] = {29.8974f};
     
      //setMaterial
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
