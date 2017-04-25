@@ -69,6 +69,36 @@ void mouse(int button, int state, int x, int y)
          break;
    }
 }
+
+// Función para controlar teclas especiales
+void specialKeys( int key, int x, int y )
+{
+
+    //  Flecha derecha: aumentar rotación 7 grados
+    if (key == GLUT_KEY_RIGHT)
+        giroy = (giroy + 5) % 360;
+
+    //  Flecha izquierda: rotación en eje Y negativo 7 grados
+    else if (key == GLUT_KEY_LEFT)
+        giroy = (giroy + 5) % 360;
+    //  Flecha arriba: rotación en eje X positivo 7 grados
+    else if (key == GLUT_KEY_UP)
+        girox = (girox + 5) % 360;
+    //  Flecha abajo: rotación en eje X negativo 7 grados
+    else if (key == GLUT_KEY_DOWN)
+        girox = (girox + 5) % 360;
+    //  Tecla especial F2 : rotación en eje Z positivo 7 grados
+    else if (key == GLUT_KEY_F2)
+        girox = (girox + 5) % 360;
+    //  Tecla especial F2 : rotación en eje Z negativo 7 grados
+    else if (key == GLUT_KEY_F2)
+        girox = (girox + 5) % 360;
+
+    //  Solicitar actualización de visualización
+    glutPostRedisplay();
+
+}
+
 int main(int argc, char** argv)
 {
    glutInit(&argc, argv);
@@ -80,6 +110,7 @@ int main(int argc, char** argv)
    glutDisplayFunc(display); 
    glutReshapeFunc(reshape);
    glutMouseFunc(mouse);
+   glutSpecialFunc(specialKeys);
    glutMainLoop();
    return 0;
 }
